@@ -1,25 +1,94 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{7F211B31-421F-478F-A1F3-DC20B41B268D}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F211B31-421F-478F-A1F3-DC20B41B268D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F211B31-421F-478F-A1F3-DC20B41B268D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F211B31-421F-478F-A1F3-DC20B41B268D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F211B31-421F-478F-A1F3-DC20B41B268D}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {EE836837-FC45-4966-B149-8213A3FC9895}
-	EndGlobalSection
-EndGlobal
+using System;
+
+namespace Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int correct = 0;     
+            Console.WriteLine("Welcome to Quiz.");
+            Console.WriteLine();
+            Console.WriteLine("------------------------");
+            Console.WriteLine("There will be 5 questions asked. Are you ready? (Y/N)");
+            string answer = Console.ReadLine().Trim().ToLower();
+            if (answer == "y"){
+                Console.WriteLine("Proceeding.");
+                    Console.WriteLine("What is the most used programming language?");
+                    Console.WriteLine("A: Python B: C# C: C++ D: Java");
+                    string response = Console.ReadLine().Trim().ToLower();
+                    if (response == "python" || response == "a")
+                    {
+                        Console.WriteLine("Congrats, that was correct. Moving onto the next question.");
+                        correct++;
+                    }
+                else
+                {
+                    Console.WriteLine("Sorry, that was incorrect. Moving onto the next question.");
+                }
+                Console.WriteLine("Question 2:");
+                Console.WriteLine("Which one of these is a programming language?");
+                Console.WriteLine();
+                Console.WriteLine("A: HTML B: Scratch C: Stackoverflow D: Java");
+                string answer2 = Console.ReadLine().Trim().ToLower();
+                if (answer2 == "d" || answer2 == "java")
+                {
+                    Console.WriteLine("Congrats, that was correct. Moving onto the next question.");
+                    correct++;
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, that was incorrect. Moving onto the next question.");
+
+                }
+                Console.WriteLine("Question 3:");
+                Console.WriteLine("Which one of these is a web language?");
+                Console.WriteLine();
+                Console.WriteLine("A: Java B: BASIC C: JavaScript D: Visual Studio");
+                string answer3 = Console.ReadLine().Trim().ToLower();
+                if (answer3 == "c" || answer3 == "javascript")
+                {
+                    Console.WriteLine("Congrats, that was correct. Moving onto the next question.");
+                    correct++;
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, that was incorrect. Moving onto the next question.");
+                }
+                Console.WriteLine("Question 4:");
+                Console.WriteLine("Who made C#?");
+                Console.WriteLine();
+                Console.WriteLine("A: Valve B: Microsoft C: .NET D: C#Core");
+                string answer4 = Console.ReadLine().Trim().ToLower();
+                if (answer4 == "b" || answer4 == "microsoft")
+                {
+                    Console.WriteLine("Congrats, that was correct. Moving onto the final question.");
+                    correct++;
+                }
+                else
+                {
+                    Console.WriteLine("Sorry, that was incorrect. Moving onto the next question.");
+                }
+                Console.WriteLine("Question 5:");
+                Console.WriteLine("C# is a(n) ____ language");
+                Console.WriteLine();
+                Console.WriteLine("A: Simple B: Object Oriented Programming C: Weak D: None of these");
+                string answer5 = Console.ReadLine().Trim().ToLower();
+                if (answer5 == "b" || answer5 == "object oriented programming")
+                {
+                    correct++;
+                    Console.WriteLine($"Congrats, that was correct. Total questions that you got correct: {correct}");
+                }
+                else
+                {
+                    Console.WriteLine($"Sorry, that was incorrect. Total questions that you got correct: {correct}");
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("Closing the app.");
+            }            
+        }
+    }
+}
